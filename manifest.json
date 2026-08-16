@@ -1,0 +1,22 @@
+{
+  "name": "Cartcreaterji - Viral Engine AI",
+  "short_name": "Cartcreaterji",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07090e",
+  "theme_color": "#0a0b10",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/8847/8847419.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/8847/8847419.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
