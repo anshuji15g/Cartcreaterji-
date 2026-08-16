@@ -2,7 +2,7 @@
   "id": "https://anshuji15g.github.io/Cartcreaterji-/",
   "name": "Cartcreaterji Pro - Viral Engine AI",
   "short_name": "Cartcreaterji",
-  "description": "AI-Powered Viral Video Architect for Creators by Ayushman",
+  "description": "AI-Powered Viral Video Architect and Hook Optimizer for Creators",
   "start_url": "https://anshuji15g.github.io/Cartcreaterji-/",
   "scope": "https://anshuji15g.github.io/Cartcreaterji-/",
   "display": "standalone",
@@ -12,10 +12,22 @@
   "categories": ["productivity", "tools", "utilities"],
   "icons": [
     {
-      "src": "https://anshuji15g.github.io/Cartcreaterji-/icon.svg",
-      "sizes": "192x192 512x512",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "https://img.icons8.com/3d-fluency/192/shopping-cart.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img.icons8.com/3d-fluency/512/shopping-cart.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img.icons8.com/3d-fluency/512/shopping-cart.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
@@ -28,4 +40,3 @@
     }
   ]
 }
-
