@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cartcreaterji — Viral Engine AI</title>
+    
+    <!-- PWA & Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0b10">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/8847/8847419.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Dynamic Background Grid -->
+    <div class="bg-glow"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="app-wrapper">
+        <!-- Header -->
+        <header class="futuristic-header">
+            <div class="brand-badge">
+                <span class="pulse-dot"></span>
+                <span>NEURAL ENGINE ACTIVE</span>
+            </div>
+            <h1 class="glow-title">Cartcreaterji</h1>
+            <p class="subtitle">AI-Powered Viral Video Architect</p>
+            <div class="creator-tag">Made by <span>Ayushman</span></div>
+        </header>
+
+        <!-- Media Upload Zone -->
+        <section class="glass-card upload-section">
+            <div class="drop-zone" id="dropArea">
+                <input type="file" id="mediaInput" accept="video/*,audio/*" hidden>
+                <div class="upload-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <label for="mediaInput" class="upload-btn">SELECT MEDIA FILE</label>
+                <p id="fileLabel" class="file-info">MP4, MOV, MP3 up to 100MB</p>
+            </div>
+
+            <!-- Upload/Scan Status Bar -->
+            <div id="progressContainer" class="progress-wrap hidden">
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <span id="statusText" class="status-indicator">Whisper Neural Scan Active...</span>
+            </div>
+        </section>
+
+        <!-- Chat / Analysis Interface -->
+        <section class="glass-card chat-section">
+            <div class="chat-header">
+                <span>AI ANALYSIS STREAM</span>
+                <button class="clear-btn" onclick="clearTerminal()">CLEAR</button>
+            </div>
+
+            <div id="chatHistory" class="chat-terminal">
+                <div class="msg bot-msg">
+                    <div class="msg-author">Cartcreaterji Core</div>
+                    <div class="msg-content">System Online. Upload your video or audio. I will scan spoken audio via Whisper, detect retention leaks, refine hooks, and architect viral titles.</div>
+                </div>
+            </div>
+
+            <!-- Quick Action Chips -->
+            <div class="quick-chips">
+                <button class="chip" onclick="triggerQuickAction('Fix my Hook (0-3 sec)')">🎯 0-3s Hook Fix</button>
+                <button class="chip" onclick="triggerQuickAction('Generate 5 Viral Titles & Tags')">🔥 5 Viral Titles</button>
+                <button class="chip" onclick="triggerQuickAction('Find Retention Dips and Pacing')">⏱️ Retention Fix</button>
+                <button class="chip" onclick="triggerQuickAction('Suggest 3 Pattern Interrupts')">⚡ Pattern Interrupts</button>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-dock">
+                <input type="text" id="userQuery" placeholder="Ask specific viral strategy or prompt..." autocomplete="off">
+                <button id="sendActionBtn" onclick="submitAnalysis()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="system-footer">
+            <span>CARTCREATERJI v2.4 • POWERED BY GROQ & WHISPER</span>
+        </footer>
+    </div>
+
+    <!-- PWA Installation Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
+            });
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
+
