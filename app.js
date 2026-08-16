@@ -4,7 +4,7 @@
  */
 
 // Production Backend Engine URL
-const BACKEND_ENDPOINT = "https://cartcreaterji-backend.onrender.com/api/analyze-audio";
+const BACKEND_ENDPOINT = "https://cartcreaterji-backend.onrender.com";
 
 const mediaInput = document.getElementById("mediaInput");
 const fileLabel = document.getElementById("fileLabel");
