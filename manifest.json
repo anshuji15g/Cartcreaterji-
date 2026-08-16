@@ -6,10 +6,25 @@
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#07090e",
-  "theme_color": "#0a0b10",
+  "background_color": "#070c0e",
+  "theme_color": "#0a0a0f",
   "orientation": "portrait-primary",
-  "categories": ["productivity", "tools", "utilities"],
+  "categories": [
+    "books &amp; reference",
+    "business",
+    "developer tools",
+    "education",
+    "entertainment",
+    "graphics",
+    "graphics &amp; design",
+    "multimedia design",
+    "network",
+    "productivity",
+    "social",
+    "social networking",
+    "utilities",
+    "video"
+  ],
   "icons": [
     {
       "src": "https://api.iconify.design/fluent-emoji-flat:shopping-cart.svg",
@@ -32,11 +47,29 @@
   ],
   "screenshots": [
     {
-      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=720&h=1280&fit=crop",
+      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=720&amp;h=1280&amp;fit=crop",
       "sizes": "720x1280",
       "type": "image/jpeg",
       "form_factor": "narrow",
       "label": "Cartcreaterji AI Studio"
     }
-  ]
+  ],
+  "lang": "en",
+  "shortcuts": [
+    {
+      "name": "Cartcreaterji ",
+      "url": "Cartcreater",
+      "description": "Cartcreaterji, cartcreaterji tool "
+    }
+  ],
+  "share_target": {
+    "method": "GET",
+    "action": "https://anshuji15g.github.io/Cartcreaterji-/",
+    "params": {
+      "title": "Cartcreaterji : for Creators to go viral on YouTube &amp; Instragram ",
+      "text": "Cartcreaterji ",
+      "url": "https://anshuji15g.github.io/Cartcreaterji-/",
+      "files": []
+    }
+  }
 }
