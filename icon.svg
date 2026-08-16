@@ -1,86 +1,201 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <defs>
-    <!-- Background Gradient -->
-    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#141a29"/>
-      <stop offset="70%" stop-color="#080c14"/>
-      <stop offset="100%" stop-color="#020408"/>
-    </radialGradient>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Cartcreaterji Pro Logo</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    <!-- Metallic Gold PRO Ribbon -->
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fff2a3"/>
-      <stop offset="30%" stop-color="#e5b842"/>
-      <stop offset="70%" stop-color="#8a5e05"/>
-      <stop offset="100%" stop-color="#f3cb57"/>
-    </linearGradient>
+  body {
+    background-color: #050608;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  }
 
-    <!-- Cyan Metallic Cart Track -->
-    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="30%" stop-color="#38bdf8"/>
-      <stop offset="70%" stop-color="#0284c7"/>
-      <stop offset="100%" stop-color="#00f2fe"/>
-    </linearGradient>
+  /* मुख्य लोगो कार्ड */
+  .app-icon {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    border-radius: 68px;
+    background: radial-gradient(circle at 50% 30%, #1a2d3d 0%, #0c1722 55%, #050a10 100%);
+    box-shadow: 
+      0 20px 50px rgba(0, 0, 0, 0.8),
+      inset 0 1px 2px rgba(255, 255, 255, 0.2),
+      inset 0 -2px 6px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 28px;
+    border: 1.5px solid rgba(80, 140, 180, 0.25);
+  }
 
-    <!-- Drop Shadow -->
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.8"/>
-    </filter>
-  </defs>
+  /* बैकग्राउंड में हल्का ब्लू ग्लो */
+  .app-icon::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+  }
 
-  <!-- Background App Tile -->
-  <rect width="512" height="512" rx="110" fill="url(#bg)"/>
-  <rect x="15" y="15" width="482" height="482" rx="95" fill="none" stroke="rgba(0, 242, 254, 0.3)" stroke-width="3"/>
+  /* टॉप गोल्ड इन्फिनिटी रिबन / PRO बैज */
+  .gold-ribbon-container {
+    position: absolute;
+    top: -12px;
+    width: 360px;
+    height: 120px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-  <!-- 3D Gold PRO Infinity Loop Ribbon -->
-  <g filter="url(#shadow)">
-    <path d="M 160 140 C 120 140 100 100 130 80 C 160 60 210 90 256 115 C 302 90 352 60 382 80 C 412 100 392 140 352 140 C 295 140 268 95 256 95 C 244 95 217 140 160 140 Z" 
-          fill="url(#gold)" stroke="#fff" stroke-width="1.5"/>
-    
-    <text x="256" y="116" 
-          font-family="system-ui, -apple-system, sans-serif" 
-          font-size="26" 
-          font-weight="900" 
-          letter-spacing="6" 
-          fill="#2b1a03" 
-          text-anchor="middle">PRO</text>
-  </g>
+  .gold-ribbon-container svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.6));
+  }
 
-  <!-- Cyber Cart & Viral Growth Cycle -->
-  <g filter="url(#shadow)">
-    <!-- Cart Base Body -->
-    <path d="M 185 200 H 210 L 225 315 H 305" 
-          fill="none" stroke="url(#cyan)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  .pro-text {
+    position: relative;
+    z-index: 11;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #4a3311;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+    margin-top: -10px;
+  }
 
-    <!-- Dynamic Flow Arrow -->
-    <path d="M 235 185 H 300 L 285 170 M 300 185 L 285 200" 
-          fill="none" stroke="url(#cyan)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  /* मुख्य कार्ट और गियर आइकॉन */
+  .cart-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.45));
+  }
 
-    <!-- Gear Flank with Lightning Bolt -->
-    <path d="M 310 220 L 325 225 L 330 238 L 342 245 L 340 260 L 328 270 L 315 285 L 290 285" 
-          fill="none" stroke="url(#cyan)" stroke-width="10" stroke-linejoin="round"/>
+  /* नीचे का ब्रांड टेक्स्ट */
+  .brand-name {
+    position: relative;
+    z-index: 2;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #f0f6fc;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  }
 
-    <polygon points="320,240 310,255 320,255 314,270 330,250 320,250" fill="#ffffff"/>
+  .brand-name span {
+    font-weight: 500;
+    color: #e2ebf5;
+  }
+</style>
+</head>
+<body>
 
-    <!-- Reverse Growth Cycle Arrow -->
-    <path d="M 300 285 L 245 285 L 260 298 M 245 285 L 260 272" 
-          fill="none" stroke="url(#cyan)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<div class="app-icon">
+  
+  <!-- गोल्ड PRO इन्फिनिटी हेडर -->
+  <div class="gold-ribbon-container">
+    <svg viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- गोल्ड ग्रेडिएंट्स -->
+        <linearGradient id="goldLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#7a5219"/>
+          <stop offset="25%" stop-color="#f5d77f"/>
+          <stop offset="50%" stop-color="#ffea9f"/>
+          <stop offset="75%" stop-color="#c69337"/>
+          <stop offset="100%" stop-color="#644313"/>
+        </linearGradient>
+        
+        <linearGradient id="goldShine" x1="0%" y1="50%" x2="100%" y2="50%">
+          <stop offset="0%" stop-color="#dfb253"/>
+          <stop offset="30%" stop-color="#fff2b3"/>
+          <stop offset="50%" stop-color="#c9973b"/>
+          <stop offset="70%" stop-color="#fff5c0"/>
+          <stop offset="100%" stop-color="#b8832a"/>
+        </linearGradient>
+      </defs>
 
-    <!-- Metallic Wheels with Glowing Hubs -->
-    <circle cx="230" cy="345" r="15" fill="#080e1a" stroke="url(#cyan)" stroke-width="7"/>
-    <circle cx="230" cy="345" r="5" fill="#ffffff"/>
+      <!-- इन्फिनिटी विंग्स लेफ्ट और राइट -->
+      <path d="M 60 65 C 20 65 20 15 65 15 C 110 15 130 50 180 50 C 230 50 250 15 295 15 C 340 15 340 65 300 65 C 250 65 220 28 180 28 C 140 28 110 65 60 65 Z" 
+            fill="url(#goldLinear)" stroke="rgba(255,240,180,0.6)" stroke-width="2"/>
 
-    <circle cx="295" cy="345" r="15" fill="#080e1a" stroke="url(#cyan)" stroke-width="7"/>
-    <circle cx="295" cy="345" r="5" fill="#ffffff"/>
-  </g>
+      <!-- सेंटर PRO ओवल बेस -->
+      <ellipse cx="180" cy="46" rx="68" ry="32" fill="url(#goldShine)" stroke="#ffe89e" stroke-width="1.5"/>
+    </svg>
+    <div class="pro-text">PRO</div>
+  </div>
 
-  <!-- Title Typography -->
-  <text x="256" y="415" 
-        font-family="system-ui, -apple-system, sans-serif" 
-        font-size="34" 
-        font-weight="900" 
-        letter-spacing="1" 
-        fill="#ffffff" 
-        text-anchor="middle">Cartcreaterji</text>
-</svg>
+  <!-- नियॉन 3D कार्ट + रीसायकल/गियर सिंबल -->
+  <div class="cart-container">
+    <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- सायन मेटैलिक ग्रेडिएंट -->
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#c8ffff"/>
+          <stop offset="40%" stop-color="#00d9ff"/>
+          <stop offset="80%" stop-color="#0080bf"/>
+          <stop offset="100%" stop-color="#004c73"/>
+        </linearGradient>
+
+        <linearGradient id="cyanGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" stop-color="#007299"/>
+          <stop offset="100%" stop-color="#6df5ff"/>
+        </linearGradient>
+      </defs>
+
+      <!-- कार्ट का आउटर फ्रेम और पहिए -->
+      <!-- बायां हैंडल और बेस -->
+      <path d="M 22 28 L 38 28 L 52 92 L 102 92" 
+            stroke="url(#cyanGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- कार्ट के दोनों व्हील्स -->
+      <circle cx="58" cy="106" r="7" fill="url(#cyanGlow)" stroke="#9ffffd" stroke-width="2"/>
+      <circle cx="98" cy="106" r="7" fill="url(#cyanGlow)" stroke="#9ffffd" stroke-width="2"/>
+
+      <!-- रीसायकल एरो लूप (बीच का स्ट्रक्चर) -->
+      <!-- टॉप एरो -->
+      <path d="M 52 48 L 74 18 L 94 18 L 86 30" 
+            stroke="url(#cyanGrad)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polygon points="90,12 108,22 90,32" fill="#7ffcff"/>
+
+      <!-- बॉटम एरो -->
+      <path d="M 98 70 L 78 90 L 62 90 L 68 80" 
+            stroke="url(#cyanGrad)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polygon points="60,96 42,86 60,76" fill="#7ffcff"/>
+
+      <!-- राइट साइड का गियर + थंडरबोल्ट प्रोफाइल -->
+      <path d="M 98 32 L 106 32 L 110 40 L 118 42 L 123 37 L 128 42 L 124 49 L 128 56 L 122 62 L 120 70 L 112 73 L 105 82" 
+            stroke="url(#cyanGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- इनर लाइटनिंग कट -->
+      <path d="M 103 44 L 95 56 L 104 56 L 96 70" 
+            stroke="#b3ffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- बॉटम टेक्स्ट -->
+  <div class="brand-name">Cart<span>createrji</span></div>
+
+</div>
+
+</body>
+</html>
