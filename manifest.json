@@ -1,75 +1,31 @@
 {
-  "id": "/Cartcreaterji-/",
+  "id": "https://anshuji15g.github.io/Cartcreaterji-/",
   "name": "Cartcreaterji Pro - Viral Engine AI",
   "short_name": "Cartcreaterji",
-  "description": "AI-Powered Viral Video Architect and Hook Optimizer for Creators",
-  "start_url": "./index.html",
-  "scope": "./",
+  "description": "AI-Powered Viral Video Architect for Creators by Ayushman",
+  "start_url": "https://anshuji15g.github.io/Cartcreaterji-/",
+  "scope": "https://anshuji15g.github.io/Cartcreaterji-/",
   "display": "standalone",
-  "background_color": "#070c0e",
-  "theme_color": "#0a0a0f",
+  "background_color": "#07090e",
+  "theme_color": "#0a0b10",
   "orientation": "portrait-primary",
-  "categories": [
-    "books &amp; reference",
-    "business",
-    "developer tools",
-    "education",
-    "entertainment",
-    "graphics",
-    "graphics &amp; design",
-    "multimedia design",
-    "network",
-    "productivity",
-    "social",
-    "social networking",
-    "utilities",
-    "video"
-  ],
+  "categories": ["productivity", "tools", "utilities"],
   "icons": [
     {
-      "src": "https://api.iconify.design/fluent-emoji-flat:shopping-cart.svg",
-      "sizes": "192x192",
+      "src": "https://anshuji15g.github.io/Cartcreaterji-/icon.svg",
+      "sizes": "192x192 512x512",
       "type": "image/svg+xml",
-      "purpose": "any"
-    },
-    {
-      "src": "./icon.svg",
-      "sizes": "512x512",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://img.icons8.com/3d-fluency/512/shopping-cart.png",
-      "sizes": "512x512",
-      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=720&amp;h=1280&amp;fit=crop",
+      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=720&h=1280&fit=crop",
       "sizes": "720x1280",
       "type": "image/jpeg",
       "form_factor": "narrow",
-      "label": "Cartcreaterji AI Studio"
+      "label": "Cartcreaterji Studio"
     }
-  ],
-  "lang": "en",
-  "shortcuts": [
-    {
-      "name": "Cartcreaterji ",
-      "url": "Cartcreater",
-      "description": "Cartcreaterji, cartcreaterji tool "
-    }
-  ],
-  "share_target": {
-    "method": "GET",
-    "action": "https://anshuji15g.github.io/Cartcreaterji-/",
-    "params": {
-      "title": "Cartcreaterji : for Creators to go viral on YouTube &amp; Instragram ",
-      "text": "Cartcreaterji ",
-      "url": "https://anshuji15g.github.io/Cartcreaterji-/",
-      "files": []
-    }
-  }
+  ]
 }
+
